@@ -7,7 +7,7 @@
 
     <title>Xebia - Mois Du JS</title>
 
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>
+    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css"/>-->
     <link rel="import" href="slot-form/x-slot-form.html">
     <link rel="import" href="slot-grid/x-slot-grid.html">
 
@@ -31,8 +31,18 @@
 </div>
 
 <script>
-    const slots = {1: [], 2: [], 3: [], 4: []};
+    const slots = {
+        1: [
+            "npm: le couteau suisse d'un projet JS",
+            "Gérer ses dépendances dans le code grâce à JSPM",
+            "Webpack pour les packager tous, et dans le code les lier."
+        ],
+        2: [],
+        3: [],
+        4: []
+    };
     const grid = document.querySelector('x-slot-grid');
+    grid.onDataChanged(slots);
 
     document
             .querySelector('x-slot-form')
